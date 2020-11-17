@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
     <artifactId>petclinic-spring</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>petclinic-spring</name>
     <description>Pet clinic spring project</description>
     <packaging>pom</packaging>
@@ -93,7 +93,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/weat0212/petclinic-spring.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>petclinic-spring-0.0.2</tag>
     </scm>
 
 </project>
