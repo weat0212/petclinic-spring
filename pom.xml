@@ -90,10 +90,10 @@
             </plugin>
         </plugins>
     </build>
-
     <scm>
-        <developerConnection>scm:git:https://github.com/weat0212/petclinic-spring.git</developerConnection>
-        <tag>0.0.1</tag>
+        <connection>scm:git:https://github.com/weat0212/petclinic-spring.git</connection>
+        <url>http://server.host.name/path/to/project.git</url>
+        <tag>HEAD</tag>
     </scm>
 
 </project>
