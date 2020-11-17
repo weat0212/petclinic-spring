@@ -92,7 +92,7 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:weat0212/petclinic-spring.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/weat0212/petclinic-spring.git</developerConnection>
         <tag>0.0.1</tag>
     </scm>
 
