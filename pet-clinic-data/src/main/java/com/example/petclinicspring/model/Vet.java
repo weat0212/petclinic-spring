@@ -6,5 +6,5 @@ package com.example.petclinicspring.model;
  * @package com.example.petclinicspring.model
  * @date 2020/11/14 下午 02:35
  */
-public class Vet extends Person{
+public class Vet extends Person {
 }

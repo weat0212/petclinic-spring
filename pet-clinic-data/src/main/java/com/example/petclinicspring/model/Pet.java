@@ -8,7 +8,7 @@ import java.time.LocalDate;
  * @package com.example.petclinicspring.model
  * @date 2020/11/14 下午 02:36
  */
-public class Pet {
+public class Pet extends BaseEntity{
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
