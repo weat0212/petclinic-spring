@@ -2,6 +2,7 @@ package com.example.petclinicspring.service.map;
 
 import com.example.petclinicspring.model.Vet;
 import com.example.petclinicspring.service.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -11,6 +12,8 @@ import java.util.Set;
  * @package com.example.petclinicspring.service.map
  * @date 2020/11/22 下午 09:30
  */
+
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
