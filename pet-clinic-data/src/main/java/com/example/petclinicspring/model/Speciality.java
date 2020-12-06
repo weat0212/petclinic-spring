@@ -6,7 +6,7 @@ package com.example.petclinicspring.model;
  * @package com.example.petclinicspring.model
  * @date 2020/12/4 下午 05:56
  */
-public class Specialty extends BaseEntity{
+public class Speciality extends BaseEntity{
 
     private String description;
 
