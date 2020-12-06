@@ -8,6 +8,6 @@ import com.example.petclinicspring.model.Speciality;
  * @package com.example.petclinicspring.service
  * @date 2020/12/6 下午 01:02
  */
-public interface SpecialtiesService extends CrudService<Speciality, Long> {
+public interface SpecialtyService extends CrudService<Speciality, Long> {
 
 }
