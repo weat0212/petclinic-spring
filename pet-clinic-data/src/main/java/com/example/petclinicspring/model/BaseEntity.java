@@ -1,5 +1,9 @@
 package com.example.petclinicspring.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 /**
@@ -8,8 +12,11 @@ import java.io.Serializable;
  * @package com.example.petclinicspring.model
  * @date 2020/11/18 下午 05:01
  */
+@MappedSuperclass
 public class BaseEntity implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     public Long getId() {
