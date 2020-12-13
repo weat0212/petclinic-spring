@@ -1,5 +1,6 @@
 package com.example.petclinicspring.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
@@ -8,11 +9,23 @@ import java.time.LocalDate;
  * @package com.example.petclinicspring.model
  * @date 2020/11/14 下午 02:36
  */
+
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity{
 
+    @Column(name = "pet_name")
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
     public String getName() {
