@@ -2,6 +2,8 @@ package com.example.petclinicspring.service;
 
 import com.example.petclinicspring.model.Owner;
 
+import java.util.List;
+
 /**
  * @author weat0212@gmail.com
  * @project petclinic-spring
@@ -12,4 +14,5 @@ public interface OwnerService extends CrudService<Owner, Long> {
 
     Owner findByLastName(String lastName);
 
+    List<Owner> findAllByLastNameLike(String lastName);
 }
