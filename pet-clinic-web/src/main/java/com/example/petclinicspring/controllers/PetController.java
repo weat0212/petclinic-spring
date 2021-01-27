@@ -39,12 +39,12 @@ public class PetController {
 
     @ModelAttribute("types")
     public Collection<PetType> populatePetTypes() {
-        return this.petTypeService.findAll();
+        return petTypeService.findAll();
     }
 
     @ModelAttribute("owner")
     public Owner findOwner(@PathVariable("ownerId") Long ownerId) {
-        return this.ownerService.findById(ownerId);
+        return ownerService.findById(ownerId);
     }
 
     @InitBinder("owner")
@@ -56,6 +56,7 @@ public class PetController {
     public String initCreationForm(Owner owner, Model model) {
         Pet pet = new Pet();
         owner.getPets().add(pet);
+        pet.setOwner(owner);
         model.addAttribute("pet", pet);
         return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
     }
