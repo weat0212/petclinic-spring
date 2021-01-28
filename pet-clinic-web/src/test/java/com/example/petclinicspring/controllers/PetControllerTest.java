@@ -69,7 +69,7 @@ class PetControllerTest {
         when(ownerService.findById(anyLong())).thenReturn(owner);
         when(petTypeService.findAll()).thenReturn(petTypes);
 
-        mockMvc.perform(get("/owner/1/pets/new"))
+        mockMvc.perform(get("/owners/1/pets/new"))
                 .andExpect(status().isOk())
                 .andExpect(model().attributeExists("owner"))
                 .andExpect(model().attributeExists("pet"))
