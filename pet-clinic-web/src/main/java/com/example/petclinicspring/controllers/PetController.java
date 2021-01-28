@@ -23,7 +23,7 @@ import java.util.Collection;
  */
 
 @Controller
-@RequestMapping("owner/{ownerId}")
+@RequestMapping("owners/{ownerId}")
 public class PetController {
 
     public static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
