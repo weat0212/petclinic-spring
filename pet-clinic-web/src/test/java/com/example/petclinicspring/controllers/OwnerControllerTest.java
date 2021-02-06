@@ -59,13 +59,15 @@ class OwnerControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(view().name("owners/findOwners"))
                 .andExpect(model().attributeExists("owner"));
+
+        verifyZeroInteractions(ownerService);
     }
 
     @Test
     void processFindFormReturnMany() throws Exception {
         when(ownerService.findAllByLastNameLike(anyString()))
-                .thenReturn(Arrays.asList(Owner.builder().id(1l).build(),
-                        Owner.builder().id(2l).build()));
+                .thenReturn(Arrays.asList(Owner.builder().id(1L).build(),
+                        Owner.builder().id(2L).build()));
 
         mockMvc.perform(get("/owners"))
                 .andExpect(status().isOk())
@@ -77,7 +79,7 @@ class OwnerControllerTest {
     void processFindFormReturnOne() throws Exception {
 
         when(ownerService.findAllByLastNameLike(anyString()))
-                .thenReturn(Arrays.asList(Owner.builder().id(1l).build()));
+                .thenReturn(Arrays.asList(Owner.builder().id(1L).build()));
 
         mockMvc.perform(get("/owners"))
                 .andExpect(status().is3xxRedirection())
